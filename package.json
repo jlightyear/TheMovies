@@ -1,0 +1,10 @@
+{
+  "name": "the-movies",
+  "author": "Sergio Revilla",
+  "devDependencies": {
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-jasmine": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-contrib-uglify": "~0.2.5"
+  }
+}

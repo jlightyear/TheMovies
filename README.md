@@ -1,9 +1,16 @@
 IRONHACK WEB DEVELOPMENT BOOTCAMP PROJECT
 =========================================
 
-The Ironhack's project.  Actual status is:
+My project for [Ironhack](http://www.ironhack.com).
 
+## Current status
 * HTML5 & CSS3
-* Responsive design
-* Git
+* Git branching and merging
+
+
+## TODO
+* Flexible design with [TukTuk](http://tuktuk.tapquo.com/)
+* Document traversing, event handling, and Ajax interactions with [QuoJS](http://quojs.tapquo.com/)
+* Use of HTML apis
+
 
