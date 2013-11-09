@@ -1,14 +1,11 @@
 <!doctype html>
 <html>
 <head>
-
     <meta charset="utf-8"> 
-
     <link rel="stylesheet" href="css/reset.css" type="text/css" />
     <link rel="stylesheet" href="css/fonts.css" type="text/css" />
     <link rel="stylesheet" href="css/grid.css" type="text/css" />
-    <link rel="stylesheet" href="css/layout.css" type="text/css" />
-
+    <link rel="stylesheet" href="css/styles.css" type="text/css" />
 </head>
 <body>      
     <header class="header">
@@ -45,14 +42,14 @@
             </ul>
         </nav>
 
-        <article class="crs-container">
+        <article class="carousel-container">
             <img src="images/img-carousel.jpg" alt="imagen" />
-            <div class="crs-txt">
+            <div class="carousel-txt">
                 <header>
-                    <h1 class="crs-txt-header">Ironman <span>la película</span></h1>
+                    <h1 class="carousel-txt-header">Ironman <span>la película</span></h1>
                 </header>
                 <p>When Tony Stark’s world is torn apart by a formidable terrorist called the Mandarin, he starts an odyssey of rebuilding and retribution.</p>
-                <ul class="crs-buttons lst-inline">
+                <ul class="carousel-buttons lst-inline">
                     <li class="tooltip-inner">
                         <div class="tooltip tooltip-up"><p>Watch the trailer in exclusive</p></div>
                         <p class="button">  <a class="button-see" href="#">see trailer</a></p>
@@ -74,69 +71,63 @@
 
             </ul>
         </nav>
-
     </section>
 
-
-
-
     <section class="container clearfix">
+        <div class="row">
+            <div class="grid_8 pull-left">
+                <article class="news">
+                    <header class="header-title tooltip-inner">
+                        <div class="tooltip tooltip-up"><p>Scarlet Johanson</p></div>
+                        <h1>Themovie Snapshot - Latest Photos and Galleries</h1>
+                    </header>   
+                    <ul class="lst-inline">
+                        <li class="tooltip-inner">
+                            <div class="tooltip tooltip-down"><p>Scarlet Johanson</p></div>
+                            <a href="#"><img src="images/img-photo.png" /></a>
+                        </li>
+                        <li class="tooltip-inner">
+                            <img src="images/img-photo.png" />
+                        </li>
+                        <li class="tooltip-inner">
+                            <img src="images/img-photo.png" />
+                        </li>
+                        <li class="tooltip-inner"> 
+                            <img src="images/img-photo.png" />
+                        </li>
+                    </ul>
+                </article>
 
-        <div class="grid_8 pull-left">
-
-            <article class="news">
-                <header class="header-title tooltip-inner">
-                    <div class="tooltip tooltip-up"><p>Scarlet Johanson</p></div>
-                    <h1>Themovie Snapshot - Latest Photos and Galleries</h1>
-                </header>   
-                <ul class="lst-inline">
-
-                    <li class="tooltip-inner">
-                        <div class="tooltip tooltip-down"><p>Scarlet Johanson</p></div>
-                        <a href="#"><img src="images/img-photo.png" /></a>
-
-                    </li>
-                    <li class="tooltip-inner">
-                        <img src="images/img-photo.png" />
-                    </li>
-                    <li class="tooltip-inner">
-                        <img src="images/img-photo.png" />
-                    </li>
-                    <li class="tooltip-inner"> 
-                        <img src="images/img-photo.png" />
-                    </li>
-                </ul>
-            </article>
-
-            <!-- start article top news -->
-            <article>
-                <header class="header-title">
-                    <h1>Top News</h1>
-                </header>
-
-                <div class="top-news clearfix">
-                    <figure class="top-news-image">
-                        <img src="images/img-noticia.png" />
-                    </figure>
-                    <div class="top-news-content">
-                        <header class="top-news-header">
-                            <h2><a href="#">‘Star Wars: Episode VII’: J.J. Abrams and Lawrence Kasdan now rewriting screenplay...</a></h2>
+                <!-- start article top news -->
+                <div class="row">
+                    <article>
+                        <header class="header-title">
+                            <h1>Top News</h1>
                         </header>
 
-                        <p>‘Star Wars: Episode VII’: J.J. Abrams and Lawrence Kasdan now rewriting screenplay...</p>
-                    </div>
+                        <div class="top-news clearfix">
+                            <figure class="top-news-image">
+                                <img src="images/img-noticia.png" />
+                            </figure>
+                            <div class="top-news-content">
+                                <header class="top-news-header">
+                                    <h2><a href="#">‘Star Wars: Episode VII’: J.J. Abrams and Lawrence Kasdan now rewriting screenplay...</a></h2>
+                                </header>   
+                                <p>‘Star Wars: Episode VII’: J.J. Abrams and Lawrence Kasdan now rewriting screenplay...</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <aside>
+                                <ul class="lst-inline">
+                                    <li class="half-size pull-left"><a href="#">2013 Gotham Nominations, Led by ‘12 Years a Slave,’ ‘Inside Llewyn Davis’... 5 </a></li>
+                                    <li class="half-size pull-right"><a href="#">‘Gravity’ Soars Past $300 Million at Worldwide Box Office </a></li>
+                                </ul>
+                            </aside>
+                        </div>
+                    </article><!-- end start top news -->
                 </div>
-
-                <aside>
-                    <ul class="lst-inline">
-                        <li class="half-size pull-left"><a href="#">2013 Gotham Nominations, Led by ‘12 Years a Slave,’ ‘Inside Llewyn Davis’... 5 </a></li>
-                        <li class="half-size pull-right"><a href="#">‘Gravity’ Soars Past $300 Million at Worldwide Box Office </a></li>
-                    </ul>
-                </aside>
-            </article><!-- end start top news -->
-
-        </div>
-
+                </div>
+            </div>
         <aside class="grid_4 pull-right">
             <article class="box-office">
                 <header class="header-title">
@@ -165,9 +156,8 @@
                 </table>
             </article>
 
-
             <article class="coming-soon">
-            <header>
+                <header>
                     <ul class="coming-soon-header lst-inline">
                         <li><a href="#">Coming Soon</a></li>
                         <li><a href="#">Opening this week</a></li>
@@ -192,7 +182,6 @@
                             </tr>
                         </tbody>
                     </table>
-
                 </article>
 
                 <article class="social">
@@ -210,7 +199,7 @@
 
         </section>
 
-        <section class="container-twitter">
+        <section class="container twitter">
             <ol class="ranking lst-inline">
                 <li>
                     <img src="images/img-1.png" />
