@@ -9,19 +9,24 @@ module.exports = function(grunt) {
 
 			js: {
 				src: ['js/*.js'],
-				dest: 'dist/<%= pkg.name %>.js'
-			},
-
-			css: {
-				src: ['css/*.css'],
-				dest: 'dist/<%= pkg.name %>.css'
+				dest: 'public/js/<%= pkg.name %>.js'
 			}
+		},
+
+		copy: {
+		  main: {
+		    files: [
+		      {expand: true, src: ['images/*'], dest: 'public/', filter: 'isFile'},
+		      {expand: true, src: ['css/**'], dest: 'public/', filter: 'isFile'},
+		      {expand: true, src: ['index.html'], dest: 'public/'},
+		    ]
+		  }
 		},
 
 		uglify: {	
 		    js: {
 		      files: {
-		        'dist/<%= pkg.name %>.min.js': 'dist/*.js'
+		        'public/js/<%= pkg.name %>.min.js': 'public/js/*.js'
 		      }
 		    }
 		  },
@@ -29,16 +34,17 @@ module.exports = function(grunt) {
 		watch: {
 			source: {
 				files: ['js/*.js', 'css/*.css', 'index.html'],
-				tasks: ['concat', 'uglify'],
+				tasks: ['concat', 'uglify', 'copy'],
 			},
 		}
 
 	});
 
 	grunt.loadNpmTasks('grunt-contrib-concat');
+	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
-	grunt.registerTask('default', ['concat', 'uglify']);
+	grunt.registerTask('default', ['concat', 'uglify', 'copy']);
 
 }

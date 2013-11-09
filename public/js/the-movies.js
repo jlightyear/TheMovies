@@ -24,6 +24,16 @@ function toRadians(degrees) {
   return degrees * (Math.PI/180)
 }
 
+function geoPosition() {
+  navigator.geolocation.getCurrentPosition(function(position) {
+    console.log(position);
+    var lat = position.coords.latitude;
+    var lon = position.coords.longitude;
+    console.log(lat + ' ' + lon);
+    return [lat, lon];
+  })
+}
+
 function distanceToCinema(cinema) {
   navigator.geolocation.getCurrentPosition(function(position) {
     // console.log(position);
@@ -147,23 +157,7 @@ distanceToCinema(cinema);
     return {
             notify: _notify
         };
-}();;if (window.DeviceOrientationEvent) {
-  console.log("DeviceOrientation are supported!");
-}
-
-function onChange(eventData) {
-    
-    var y = eventData.gamma;
-    var x = eventData.beta;
-    var z = eventData.alpha;
-
-    var logo = document.querySelector('#logo');
-    logo.style.webkitTransform = "rotateY(" + y * 10 + "deg)";
-}
-
-window.addEventListener('deviceorientation', onChange, false);
-
-    ;self.onmessage = function(event) {
+}();;self.onmessage = function(event) {
     self.postMessage("Recibed:" + event.data);
 };
 

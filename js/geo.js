@@ -24,6 +24,16 @@ function toRadians(degrees) {
   return degrees * (Math.PI/180)
 }
 
+function geoPosition() {
+  navigator.geolocation.getCurrentPosition(function(position) {
+    console.log(position);
+    var lat = position.coords.latitude;
+    var lon = position.coords.longitude;
+    console.log(lat + ' ' + lon);
+    return [lat, lon];
+  })
+}
+
 function distanceToCinema(cinema) {
   navigator.geolocation.getCurrentPosition(function(position) {
     // console.log(position);
