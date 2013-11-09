@@ -114,8 +114,7 @@ window.onsubmit = function(){
     
 }();
 
-// storage.model("movies", ["year", "genre", "director", "similars"]);
-
+// storage.model("cinemas", ["position", "movies"]);
 // Create
 // storage.create("Batman", 1989, "action", "Tim Burton", ["Superman", "Spiderman"]);
 // storage.create("Superman", 1982, "action", undefined, ["Batman", "Spiderman"]);
@@ -131,13 +130,7 @@ window.onsubmit = function(){
 // storage.read("Amazing Spiderman");
 // storage.read();
 
-storage.model("cinemas", ["position", "movies"]);
-storage.create("Palafox", {lat: 40.430109, lon: -3.700892 }, ["Batman", "Superman"]);
-
-var cinema = storage.read();
-distanceToCinema(cinema);
-
-
+storage.model("location", ["position"]);
 ;var notification = function() {
 
     var _icon = 'icon.png';
