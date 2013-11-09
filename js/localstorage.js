@@ -59,21 +59,3 @@ var storage = function () {
     };
     
 }();
-
-// storage.model("cinemas", ["position", "movies"]);
-// Create
-// storage.create("Batman", 1989, "action", "Tim Burton", ["Superman", "Spiderman"]);
-// storage.create("Superman", 1982, "action", undefined, ["Batman", "Spiderman"]);
-// storage.create("Amazing Spiderman", 2012, "action", "A Freak Director", ["Batman", "Superman"]);
-// // Read
-// storage.read();
-// storage.read("Superman");
-// // Update
-// storage.update("Batman", 2012, "action", "Tim Burton", ["Superman", "Spiderman"]);
-// storage.read("Batman");
-// // Delete
-// storage.drop("Amazing Spiderman");
-// storage.read("Amazing Spiderman");
-// storage.read();
-
-//storage.model("location", ["position"]);

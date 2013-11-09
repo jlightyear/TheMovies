@@ -24,19 +24,16 @@ function toRadians(degrees) {
   return degrees * (Math.PI/180)
 }
 
-function geoPosition() {
+function getCurrentLocation() {
   navigator.geolocation.getCurrentPosition(function(position) {
-    console.log(position);
     var lat = position.coords.latitude;
     var lon = position.coords.longitude;
-    console.log(lat + ' ' + lon);
     return {"lat": lat, "lon": lon };
   });
 }
 
 function distanceToCinema(cinema) {
   navigator.geolocation.getCurrentPosition(function(position) {
-    // console.log(position);
     var lat = position.coords.latitude;
     var lon = position.coords.longitude;
     var locationString = document.createTextNode(lat + ", " + lon);
@@ -105,42 +102,4 @@ function distanceToCinema(cinema) {
         drop    : _drop
     };
     
-}();
-
-// storage.model("cinemas", ["position", "movies"]);
-// Create
-// storage.create("Batman", 1989, "action", "Tim Burton", ["Superman", "Spiderman"]);
-// storage.create("Superman", 1982, "action", undefined, ["Batman", "Spiderman"]);
-// storage.create("Amazing Spiderman", 2012, "action", "A Freak Director", ["Batman", "Superman"]);
-// // Read
-// storage.read();
-// storage.read("Superman");
-// // Update
-// storage.update("Batman", 2012, "action", "Tim Burton", ["Superman", "Spiderman"]);
-// storage.read("Batman");
-// // Delete
-// storage.drop("Amazing Spiderman");
-// storage.read("Amazing Spiderman");
-// storage.read();
-
-//storage.model("location", ["position"]);
-;var notification = function() {
-
-    var _icon = 'icon.png';
-
-    var _notify = function(title, content){
-        if (window.webkitNotifications) {
-            console.log("Notifications are supported");
-        }
-
-        if (window.webkitNotifications.checkPermission() == 0) {
-            console.log("Notifications are supported");
-        }
-
-        window.webkitNotifications.createNotification(_icon, title, content).show();
-    };
-
-    return {
-            notify: _notify
-        };
 }();

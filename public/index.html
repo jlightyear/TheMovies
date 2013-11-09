@@ -8,8 +8,10 @@
 	<link rel="stylesheet" href="css/styles.css" type="text/css" />
 	<script type="text/javascript" src="js/the-movies.min.js"></script>
 	<script type="text/javascript">
-		var pos = geoPosition();
-		console.log(pos);
+		var currentLocation = getCurrentLocation();
+		storage.model("location", "position");
+		storage.create("currentLocation", currentLocation);
+		console.log(currentLocation);
 	</script>
 </head>
 <body>      
