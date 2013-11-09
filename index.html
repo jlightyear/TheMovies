@@ -1,17 +1,15 @@
 <!doctype html>
 <html>
 <head>
-
 	<meta charset="utf-8"> 
-
 	<link rel="stylesheet" href="css/reset.css" type="text/css" />
 	<link rel="stylesheet" href="css/fonts.css" type="text/css" />
-	<link rel="stylesheet" href="css/layout.css" type="text/css" />
-
+	<link rel="stylesheet" href="css/grid.css" type="text/css" />
+	<link rel="stylesheet" href="css/styles.css" type="text/css" />
 </head>
-<body>		
+<body>      
 	<header class="header">
-		<div class="hdr-container clearfix">
+		<div class="header-container clearfix">
 			<div class="pull-left">
 				<p class="header-brand img-sprite"><a href="#"></a></p>
 				<nav class="header-nav">
@@ -25,7 +23,6 @@
 			</div>
 			<form  action="#" method="GET" class="pull-right">
 				<label class="tooltip-inner">Search</label>
-
 				<input type="search" name="search"  />
 				<div class="tooltip tooltip-up"><p>Search this web</p></div>
 				<!--<input type="button" value="Search" />-->
@@ -54,7 +51,7 @@
 				<ul class="carousel-buttons lst-inline">
 					<li class="tooltip-inner">
 						<div class="tooltip tooltip-up"><p>Watch the trailer in exclusive</p></div>
-						<p class="button">	<a class="button-see" href="#">see trailer</a></p>
+						<p class="button">  <a class="button-see" href="#">see trailer</a></p>
 					</li>
 					<li>
 						<p class="button"><a class="button-add" href="#">add to watch list</a></p>
@@ -70,73 +67,67 @@
 				<li><a href="#"></a></li>
 				<li><a href="#"></a></li>
 				<li><a href="#"></a></li>
-
 			</ul>
 		</nav>
-
 	</section>
 
-
-
-
-	<section class="container-info clearfix">
-
-		<div class="col-1 pull-left">
-
-			<article class="news">
-				<header class="header-title tooltip-inner">
-					<div class="tooltip tooltip-up"><p>Scarlet Johanson</p></div>
-					<h1>Themovie Snapshot - Latest Photos and Galleries</h1>
-				</header>	
-				<ul class="lst-inline">
-
-					<li class="tooltip-inner">
-						<div class="tooltip tooltip-down"><p>Scarlet Johanson</p></div>
-						<a href="#"><img src="images/img-photo.png" /></a>
-
-					</li>
-					<li class="tooltip-inner">
-						<img src="images/img-photo.png" />
-					</li>
-					<li class="tooltip-inner">
-						<img src="images/img-photo.png" />
-					</li>
-					<li class="tooltip-inner"> 
-						<img src="images/img-photo.png" />
-					</li>
-				</ul>
-			</article>
-
-			<!-- start article top news -->
-			<article>
-				<header class="header-title">
-					<h1>Top News</h1>
-				</header>
-
-				<div class="top-news clearfix">
-					<figure class="top-news-image">
-						<img src="images/img-noticia.png" />
-					</figure>
-					<div class="top-news-content">
-						<header class="top-news-header">
-							<h2><a href="#">‘Star Wars: Episode VII’: J.J. Abrams and Lawrence Kasdan now rewriting screenplay...</a></h2>
-						</header>
-
-						<p>‘Star Wars: Episode VII’: J.J. Abrams and Lawrence Kasdan now rewriting screenplay...</p>
-					</div>
-				</div>
-
-				<aside>
+	<section class="container clearfix">
+		<div class="row">
+			<div class="home-content grid_8 pull-left">
+				<article class="news">
+					<header class="header-title tooltip-inner">
+						<div class="tooltip tooltip-up"><p>Scarlet Johanson</p></div>
+						<h1>Themovie Snapshot - Latest Photos and Galleries</h1>
+					</header>   
 					<ul class="lst-inline">
-						<li class="half-size pull-left"><a href="#">2013 Gotham Nominations, Led by ‘12 Years a Slave,’ ‘Inside Llewyn Davis’... 5 </a></li>
-						<li class="half-size pull-right"><a href="#">‘Gravity’ Soars Past $300 Million at Worldwide Box Office </a></li>
+						<li class="tooltip-inner">
+							<div class="tooltip tooltip-down"><p>Scarlet Johanson</p></div>
+							<a href="#"><img src="images/img-photo.png" /></a>
+						</li>
+						<li class="tooltip-inner">
+							<img src="images/img-photo.png" />
+						</li>
+						<li class="tooltip-inner">
+							<img src="images/img-photo.png" />
+						</li>
+						<li class="tooltip-inner"> 
+							<img src="images/img-photo.png" />
+						</li>
 					</ul>
-				</aside>
-			</article><!-- end start top news -->
+				</article>
 
+				<!-- start article top news -->
+
+				<article>
+					<header class="header-title">
+						<h1>Top News</h1>
+					</header>
+
+					<div class="row">
+						<figure class="grid_6">
+							<img src="images/img-noticia.png" />
+						</figure>
+						<div class="grid_6 top-news">
+							<header class="top-news-header">
+								<h2><a href="#">‘Star Wars: Episode VII’: J.J. Abrams and Lawrence Kasdan now rewriting screenplay...</a></h2>
+							</header>   
+							<p>‘Star Wars: Episode VII’: J.J. Abrams and Lawrence Kasdan now rewriting screenplay...</p>
+						</div>
+					</div>
+					<div class="row">
+						<aside class="top-aside clearfix">
+							<ul class="lst-inline">
+								<li class="half-size pull-left"><a href="#">2013 Gotham Nominations, Led by ‘12 Years a Slave,’ ‘Inside Llewyn Davis’...</a></li>
+								<li class="half-size pull-right"><a href="#">‘Gravity’ Soars Past $300 Million at Worldwide Box Office </a></li>
+							</ul>
+						</aside>
+					</div>
+				</article><!-- end start top news -->
+
+			</div>
 		</div>
 
-		<aside class="col-2 pull-right">
+		<aside class="grid_4 pull-right">
 			<article class="box-office">
 				<header class="header-title">
 					<h1>Box Office</h1>
@@ -164,9 +155,8 @@
 				</table>
 			</article>
 
-
 			<article class="coming-soon">
-			<header>
+				<header>
 					<ul class="coming-soon-header lst-inline">
 						<li><a href="#">Coming Soon</a></li>
 						<li><a href="#">Opening this week</a></li>
@@ -191,7 +181,6 @@
 							</tr>
 						</tbody>
 					</table>
-
 				</article>
 
 				<article class="social">
@@ -204,98 +193,96 @@
 						<li class="google-logo img-sprite"><a href="#"></a></li>
 					</ul>
 				</article>
-
 			</aside>
-
 		</section>
-
-		<section class="container-twitter">
-			<ol class="ranking lst-inline">
-				<li>
-					<img src="images/img-1.png" />
-					<div>
-						<p>80%</p>
-						<span>
-							<span></span>
-						</span>
-						<p><a href="#"><em>@megryan</em></p>
+		<div class="container" >
+			<section class="twitter">
+				<ol class="ranking lst-inline">
+					<div class="row">
+						<li class="grid_4">
+							<img src="images/img-1.png" />
+							<div>
+								<p>80%</p>
+								<span>
+									<span></span>
+								</span>
+								<p><a href="#"><em>@megryan</em></p>
+							</div>
+						</li>
+						<li class="grid_4">
+							<img  src="images/img-1.png" />
+							<div>
+								<p>80%</p>
+								<span>
+									<span></span>
+								</span>
+								<p><a href="#"><em>@megryan</em></p>
+							</div>
+						</li>
+						<li class="grid_4">
+							<img src="images/img-1.png" />
+							<div>
+								<p>80%</p>
+								<span>
+									<span></span>
+								</span>
+								<p><a href="#"><em>@megryan</em></p>
+							</div>
+						</li>
 					</div>
-				</li>
-				<li>
-					<img  src="images/img-1.png" />
-					<div>
-						<p>80%</p>
-						<span>
-							<span></span>
-						</span>
-						<p><a href="#"><em>@megryan</em></p>
+					<div class="row">
+						<li class="grid_4">
+							<img src="images/img-1.png" />
+							<div>
+								<p>80%</p>
+								<span>
+									<span></span>
+								</span>
+								<p><a href="#"><em>@megryan</em></p>
+							</div>
+						</li>
+						<li class="grid_4">
+							<img  src="images/img-1.png" />
+							<div>
+								<p>80%</p>
+								<span>
+									<span></span>
+								</span>
+								<p><a href="#"><em>@megryan</em></p>
+							</div>
+						</li>
+						<li class="grid_4">
+							<img src="images/img-1.png" />
+							<div>
+								<p>80%</p>
+								<span>
+									<span></span>
+								</span>
+								<p><a href="#"><em>@megryan</em></p>
+							</div>
+						</li>
 					</div>
-				</li>
-				<li>
-					<img src="images/img-1.png" />
-					<div>
-						<p>80%</p>
-						<span>
-							<span></span>
-						</span>
-						<p><a href="#"><em>@megryan</em></p>
-					</div>
-				</li>
-				<li>
-					<img src="images/img-1.png" />
-					<div>
-						<p>80%</p>
-						<span>
-							<span></span></span>
-						</span>
-						<p><a href="#"><em>@megryan</em></p>
-					</div>
-				</li>
-				<li>
-					<img src="images/img-1.png" />
-					<div>
-						<p>80%</p>
-						<span>
-							<span></span>
-						</span>
-						<p><a href="#"><em>@megryan</em></p>
-					</div>
-				</li>
-				<li>
-					<img src="images/img-1.png" />
-					<div>
-						<p>80%</p>
-						<span>
-							<span></span>
-						</span>
-						<p><a href="#"><em>@megryan</em></p>
-					</div>
-				</li>
-			</ol>
-		</section>
-
-
-
-		<footer>
-
-			<div class="footer-inner">
-				<p><img src="img" /></p>	
-
+				</ol>
+			</section>
+		</div>
+		<footer class="footer">
+			<div class="container">
+				<p class="bottom-logo img-sprite"><a href="#"></a></p>    
 				<nav>
 					<ul class="lst-inline">
-						<li><a href="#">Home</li>
-						<li><a href="#">Search</li>
-						<li><a href="#">Site Index</li>
-						<li><a href="#">In Theaters</li>
-						<li><a href="#">Coming Soon</li>
-						<li><a href="#">Top Movies</li>
-						<li><a href="#">Watchlist</li>
-						<li><a href="#">Top 250</li>
-						<li><a href="#">TV</li>
-						<li><a href="#">News</li>
-						<li><a href="#">Video</li>
-						<li><a href="#">Message Boards</li>
-						<li><a href="#">Press Room</li>
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Search</a></li>
+						<li><a href="#">Site Index</a></li>
+						<li><a href="#">In Theaters</a></li>
+						<li><a href="#">Coming Soon</a></li>
+						<li><a href="#">Top Movies</a></li>
+						<li><a href="#">Watchlist</a></li>
+						<li><a href="#">Top 250</a></li>
+						<li><a href="#">TV</a></li>
+						<li><a href="#">News</a></li>
+						<li><a href="#">Video</a></li>
+						<li><a href="#">Message Boards</a></li>
+						<li><a href="#">Press Room</a></li>
 					</ul>
 					<ul class="lst-inline">
 						<li><a href="#">Register</a></li>
@@ -304,14 +291,7 @@
 						<li><a href="#">Contact Us</a></li>
 						<li><a href="#">Jobs</a></li>
 					</ul>
-
 				</nav>
-
 			</footer>
-
-
-
-
-
 		</body>
 		</html>
