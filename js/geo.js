@@ -30,8 +30,8 @@ function geoPosition() {
     var lat = position.coords.latitude;
     var lon = position.coords.longitude;
     console.log(lat + ' ' + lon);
-    return [lat, lon];
-  })
+    return {"lat": lat, "lon": lon };
+  });
 }
 
 function distanceToCinema(cinema) {
@@ -44,11 +44,4 @@ function distanceToCinema(cinema) {
     // console.log(lat + ' ' + lon);
     return getDistance(lat, lon, cinema.position.lat, cinema.position.lon);
   })
-}
-
-window.onsubmit = function(){
-  var cinemaName = document.getElementById('cinema-name').value;
-  var cinema = storage.get(cinemaName);
-  var distance = distanceToCinema(cinema);
-  alert(distance);
 }

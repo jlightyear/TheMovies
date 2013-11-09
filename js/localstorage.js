@@ -76,4 +76,4 @@ var storage = function () {
 // storage.read("Amazing Spiderman");
 // storage.read();
 
-storage.model("location", ["position"]);
+//storage.model("location", ["position"]);

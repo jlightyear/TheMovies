@@ -30,8 +30,8 @@ function geoPosition() {
     var lat = position.coords.latitude;
     var lon = position.coords.longitude;
     console.log(lat + ' ' + lon);
-    return [lat, lon];
-  })
+    return {"lat": lat, "lon": lon };
+  });
 }
 
 function distanceToCinema(cinema) {
@@ -44,13 +44,6 @@ function distanceToCinema(cinema) {
     // console.log(lat + ' ' + lon);
     return getDistance(lat, lon, cinema.position.lat, cinema.position.lon);
   })
-}
-
-window.onsubmit = function(){
-  var cinemaName = document.getElementById('cinema-name').value;
-  var cinema = storage.get(cinemaName);
-  var distance = distanceToCinema(cinema);
-  alert(distance);
 }
 ;var storage = function () {
     _key = null;
@@ -130,7 +123,7 @@ window.onsubmit = function(){
 // storage.read("Amazing Spiderman");
 // storage.read();
 
-storage.model("location", ["position"]);
+//storage.model("location", ["position"]);
 ;var notification = function() {
 
     var _icon = 'icon.png';
@@ -150,13 +143,4 @@ storage.model("location", ["position"]);
     return {
             notify: _notify
         };
-}();;self.onmessage = function(event) {
-    self.postMessage("Recibed:" + event.data);
-};
-
-// var worker = new Worker('task.js');
-// worker.postMessage(['model', 'movies']);
-
-// worker.addEventListener("message", function(event) {
-//     console.log(event);
-// });
+}();
