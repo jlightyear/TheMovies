@@ -18,18 +18,27 @@ module.exports = function(grunt) {
 			}
 		},
 
+		uglify: {	
+		    js: {
+		      files: {
+		        'dist/<%= pkg.name %>.min.js': 'dist/*.js'
+		      }
+		    }
+		  },
+
 		watch: {
 			source: {
-				files: ['*.js', 'spec/*.js'],
-				tasks: ['jasmine'],
+				files: ['js/*.js', 'css/*.css', 'index.html'],
+				tasks: ['concat', 'uglify'],
 			},
 		}
 
 	});
 
 	grunt.loadNpmTasks('grunt-contrib-concat');
+	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
-	grunt.registerTask('default', ['concat']);
+	grunt.registerTask('default', ['concat', 'uglify']);
 
 }
