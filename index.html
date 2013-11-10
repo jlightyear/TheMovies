@@ -6,13 +6,11 @@
 	<link rel="stylesheet" href="css/fonts.css" type="text/css" />
 	<link rel="stylesheet" href="css/grid.css" type="text/css" />
 	<link rel="stylesheet" href="css/styles.css" type="text/css" />
-	<script type="text/javascript" src="js/the-movies.min.js"></script>
 	<script type="text/javascript" src="js/quo.js"></script>
+	<script type="text/javascript" src="js/the-movies.min.js"></script>
 	<script type="text/javascript">
-		var currentLocation = getCurrentLocation();
+		
 		storage.model("location", "position");
-		storage.create("currentLocation", currentLocation);
-		console.log(currentLocation);
 	</script>
 </head>
 <body>      
@@ -83,7 +81,7 @@
 
 	<section class="container clearfix">
 		<section class="row location">
-			<p>Your current location: </p>
+			<p >Your current location: </p><span id="#location"></span>
 		</section>
 		<div class="row">
 			<div class="home-content grid_8 pull-left">

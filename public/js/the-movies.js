@@ -1,4 +1,23 @@
-if (navigator.geolocation) {
+$$(document).ready(function() {
+    $$('.button-add').on('click', function() {
+     $$('.button-add').html('added!')
+    });
+});
+
+
+
+$$(document).ready(function() {
+    var mylocation = getCurrentLocation();
+    setTimeout(function() {
+        $$('#location').append(JSON.stringify(mylocation));
+    }, 3000);
+    
+});
+
+
+
+
+;if (navigator.geolocation) {
   console.log("Geolocation is available ");
 }
 
@@ -26,9 +45,13 @@ function toRadians(degrees) {
 
 function getCurrentLocation() {
   navigator.geolocation.getCurrentPosition(function(position) {
-    var lat = position.coords.latitude;
-    var lon = position.coords.longitude;
-    return {"lat": lat, "lon": lon };
+    var _lat = position.coords.latitude;
+    var _lon = position.coords.longitude;
+    console.log(position);
+    return {
+      lat:  _lat,
+      lon:  _lon, 
+    }
   });
 }
 
@@ -41,8 +64,7 @@ function distanceToCinema(cinema) {
     // console.log(lat + ' ' + lon);
     return getDistance(lat, lon, cinema.position.lat, cinema.position.lon);
   })
-}
-;var storage = function () {
+};var storage = function () {
     _key = null;
     _fields = {};
 

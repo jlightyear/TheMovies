@@ -26,9 +26,13 @@ function toRadians(degrees) {
 
 function getCurrentLocation() {
   navigator.geolocation.getCurrentPosition(function(position) {
-    var lat = position.coords.latitude;
-    var lon = position.coords.longitude;
-    return {"lat": lat, "lon": lon };
+    var _lat = position.coords.latitude;
+    var _lon = position.coords.longitude;
+    console.log(position);
+    return {
+      lat:  _lat,
+      lon:  _lon, 
+    }
   });
 }
 
