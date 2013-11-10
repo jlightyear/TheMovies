@@ -275,6 +275,31 @@ a { text-decoration: none; color: #415374; }
 
 .location { margin-bottom: 2%; font-size: 1.25em;}
 
+@media screen and (max-width : 1024px) {
+    .grid_1,
+    .grid_2,
+    .grid_3,
+    .grid_4,
+    .grid_5,
+    .grid_6,
+    .grid_7,
+    .grid_8,
+    .grid_9,
+    .grid_10,
+    .grid_11,
+    .grid_12 {
+        width:100%;
+    }
+
+    .carousel-txt {
+        position: absolute;
+        top: 25%;
+        left: 30%;
+        right: 30%;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    }
+}
+
 @media screen and (max-width : 780px) {
     .grid_1,
     .grid_2,
