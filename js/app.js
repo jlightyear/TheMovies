@@ -6,14 +6,5 @@ $$(document).ready(function() {
 
 
 
-$$(document).ready(function() {
-    var mylocation = getCurrentLocation();
-    setTimeout(function() {
-        $$('#location').append(JSON.stringify(mylocation));
-    }, 3000);
-    
-});
-
-
 
 

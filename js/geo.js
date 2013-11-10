@@ -24,15 +24,12 @@ function toRadians(degrees) {
   return degrees * (Math.PI/180)
 }
 
-function getCurrentLocation() {
+function showCurrentLocation() {
   navigator.geolocation.getCurrentPosition(function(position) {
-    var _lat = position.coords.latitude;
-    var _lon = position.coords.longitude;
-    console.log(position);
-    return {
-      lat:  _lat,
-      lon:  _lon, 
-    }
+    var lat = position.coords.latitude;
+    var lon = position.coords.longitude;
+    var locationString = document.createTextNode(lat + ", " + lon);
+    $$('.location p span').text(lat + ', ' + lon);
   });
 }
 
