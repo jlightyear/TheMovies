@@ -8,7 +8,7 @@ My project for [Ironhack](http://www.ironhack.com).
 * Git branching and merging
 * Responsive design (need some fixes)
 * Continuous integration with Grunt and Bower
-* Heroky deployment with Rack
+* Heroku deployment with Rack
 * Use of HTML apis (geolocation and local storage)
 
 ## TODO
