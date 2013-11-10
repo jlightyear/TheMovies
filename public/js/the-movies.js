@@ -3,12 +3,7 @@ $$(document).ready(function() {
      $$('.button-add').html('added!')
     });
 });
-
-
-
-
-
-;if (navigator.geolocation) {
+ ;if (navigator.geolocation) {
   console.log("Geolocation is available ");
 }
 
@@ -38,21 +33,10 @@ function showCurrentLocation() {
   navigator.geolocation.getCurrentPosition(function(position) {
     var lat = position.coords.latitude;
     var lon = position.coords.longitude;
-    var locationString = document.createTextNode(lat + ", " + lon);
     $$('.location p span').text(lat + ', ' + lon);
   });
 }
-
-function distanceToCinema(cinema) {
-  navigator.geolocation.getCurrentPosition(function(position) {
-    var lat = position.coords.latitude;
-    var lon = position.coords.longitude;
-    var locationString = document.createTextNode(lat + ", " + lon);
-    document.getElementById('current-location').appendChild(locationString);
-    // console.log(lat + ' ' + lon);
-    return getDistance(lat, lon, cinema.position.lat, cinema.position.lon);
-  })
-};var storage = function () {
+;var storage = function () {
     _key = null;
     _fields = {};
 

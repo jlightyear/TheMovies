@@ -3,8 +3,4 @@ $$(document).ready(function() {
      $$('.button-add').html('added!')
     });
 });
-
-
-
-
-
+ 
