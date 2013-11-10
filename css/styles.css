@@ -20,21 +20,27 @@ a { text-decoration: none; color: #415374; }
 
 .nav-points a:hover { background-color: #34486e; }
 .nav-prev, .nav-next { position: absolute; width: 20%; top: 0; bottom: 0; }
-.nav-prev { left: 20px; }
-.nav-next { right: 20px; }
-    .nav-prev a, .nav-next a { display: block; width: 100%; height: 100%; }
+.nav-prev { left: 0; }
+.nav-next { right: 0; }
+    .nav-prev a, .nav-next a { 
+        display: block; 
+        width: 100%; 
+        height: 100%;
+        transition: background-color 0.5s ease 0s;
+        opacity: 0;
+        
+    }
+    .nav-prev a:hover, .nav-next a:hover { background-color: #cdcdcd; opacity: 0.3;}
 .nav-prev-arrow { background-position: -558px -5px; }
 .nav-next-arrow { background-position: -381px -5px; float: right; }
 
 .nav-position {
-    transition: opacity 0.5s ease 3s;
     width: 23px;
     height: 150px;
     top: 50%;
     margin-top: -75px;
     position: relative;
     display: block;
-    opacity: 0;
 }
 
 .header { position: fixed; width: 100%; top: 0; z-index: 1; 
