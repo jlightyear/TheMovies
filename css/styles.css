@@ -2,6 +2,10 @@ body { font-family: 'proxima_novaregular', sans-serif; color: #000; }
 h1 { font-family: 'proxima_novabold'; font-size: 1.25em; }
 a { text-decoration: none; color: #415374; }
 
+.item { display: none;}
+
+.active { display: block;}
+
 .lst-inline > li { display: inline-block; margin-left: -4px;}
 .lst-inline > li:first-child { margin-left: 0;}
 .lst-top > li { vertical-align: top; }
@@ -18,7 +22,7 @@ a { text-decoration: none; color: #415374; }
   margin: 0 5px; 
 }
 
-.nav-points a:hover { background-color: #34486e; }
+.nav-points a:hover, .nav-points .bullet_active { background-color: #34486e; }
 .nav-prev, .nav-next { position: absolute; width: 10%; top: 0; bottom: 0; }
 .nav-prev { left: 0; }
 .nav-next { right: 0; }
